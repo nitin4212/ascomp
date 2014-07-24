@@ -1,7 +1,7 @@
 window.R3MobileApp = $.extend(true, window.R3MobileApp, {
   "config": {
     "layoutSet": "slideout",
-    "ServiceUrl": "http://192.168.0.171/R3MobileService/Service1.svc",
+    "ServiceUrl": "http://192.168.0.171/R3MobileService/Service1.svc/",
     "navigation": [
       {
         "title": "Home",
