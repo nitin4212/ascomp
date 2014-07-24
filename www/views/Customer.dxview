@@ -1,0 +1,64 @@
+<div data-options="dxView : { name: 'Customer', title: 'Customer' } " >
+    <div  data-options="dxContent : { targetPlaceholder: 'content' } " >
+      <table>      
+        <tr>
+           <td style="font-weight:bold;font-size:15px;font-family:arial" >Customer :   </td> 
+           <td width="45%" > </td>
+           <td style="font-weight:bold;font-size:13px;font-family:arial"><div  data-bind="dxLookup: {
+                                        dataSource: dataSourceCustomer,
+                                        displayExpr: 'Name',
+                                        displayValue: currentValue,
+                                        valueExpr: 'Id',
+                                        value: CustomerSelected,
+                                        fullScreen: lookupCustfullScreen,
+                                        valueChangeAction: processValueChange ,
+                                        title: 'Select Customer',
+                                        searchEnabled: true,searchPlaceholder: true
+                                        }"  id="lCustomer" >
+                                        </div>
+
+              </td>
+        </tr>         
+        
+        <tr> 
+            <td colspan="3" style="width:100%">
+            <table width="100%">
+                <tr style="width:100%">
+                    <td style="width:100%;overflow-y:visible ; " data-bind="dxList: { dataSource: minibrwDs,height:'92%',width:'100%' }"   >
+                        <div data-options="dxTemplate:{name:'item'}" style="clear: both;">
+                           <table>
+                            <tr>
+                                <td align="left" width="9%" style="color:black;font-weight:bold;">OrdNo:</td><td  ><div style="align:left; font-size:10px;color:black" data-bind="text: OrdNo"  ></div></td>
+                                <td align="left" width="9%" style="color:black;font-weight:bold;">Value:</td><td><div style="align:left;font-size:10px; color:black" data-bind="text: Val"></div>  </td>                        
+                                <td align="left" width="9%" style="color:black;font-weight:bold;">Status:</td><td ><div style="align:left;font-size:10px; color:black" data-bind="text: DocStatus"  ></div></td>
+                            </tr>                    
+                        </table>
+                        </div>                
+                    </td>
+                </tr>
+                <tr>
+                    <td  data-bind="dxButton: { text: 'NewOrder',clickAction: NewOrderClick }" >                    
+                    </td>
+                    <td style="width:45%" ></td>
+                    <td align="right" data-bind="dxButton: { text: 'View More',clickAction: BrowserClick }" >                    
+                    </td>
+                </tr>
+            </table>  
+            </td>         
+        </tr>
+        <!--<tr>
+            <td colspan="3" data-bind="dxList: { dataSource: minibrwDataSource,height:'92%' }"  overflow:scroll; >
+                <div data-options="dxTemplate:{name:'item'}" style="clear: both;">
+                   <table>
+                    <tr>
+                        <td align="left" width="9%" style="color:black;font-weight:bold;">OrdNo:</td><td  ><div style="align:left; font-size:10px;color:black" data-bind="text: OrdNo"  ></div></td>
+                        <td align="left" width="9%" style="color:black;font-weight:bold;">Value:</td><td><div style="align:left;font-size:10px; color:black" data-bind="text: Val"></div>  </td>                        
+                        <td align="left" width="9%" style="color:black;font-weight:bold;">Status:</td><td ><div style="align:left;font-size:10px; color:black" data-bind="text: DocStatus"  ></div></td>
+                    </tr>                    
+                </table>
+                </div>                
+            </td>        
+        </tr>-->
+     </table>  
+    </div>
+</div>

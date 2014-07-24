@@ -1,0 +1,6 @@
+<div data-options="dxView : { name: 'Ledger', title: 'Ledger' } " >
+    <div  data-options="dxContent : { targetPlaceholder: 'content' } " >
+        <div  data-bind="dxTextBox: {value: CustRef}">
+        </div>
+    </div>
+</div>

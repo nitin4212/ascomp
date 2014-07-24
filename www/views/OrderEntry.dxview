@@ -1,0 +1,72 @@
+<div data-options="dxView : { name: 'OrderEntry', title: 'Order Entry' } " >
+    <div  data-options="dxContent : { targetPlaceholder: 'content' } " >        
+    <!--<div data-bind="dxTextBox: { mode: 'search', value: searchString, visible: showSearch, valueUpdateEvent: 'search change keyup' }"></div>
+      <div class="dx-fieldset">
+            <div class="dx-field">        
+                <div class="dx-field-label">Customer:</div>
+                   <div class="dx-field-value" data-bind="dxLookup: {
+                                                            dataSource: dataSourceCustomer,
+                                                            displayExpr: 'Name',
+                                                            valueExpr: 'ID',
+                                                            value: CustomerSelected,
+                                                             valueChangeAction: processValueChange ,
+                                                            title: 'Customer',
+                                                            searchEnabled: true,searchPlaceholder: true
+                                                           }"  id="lCustomer">
+                  </div>
+             </div>
+            <div class="dx-field">        
+                <div class="dx-field-label">CustomerRef:</div>
+                    <div class="dx-field-value" data-bind="dxTextBox: {value: CustRef}">
+                    </div>
+             </div>
+        </div>   --> 
+
+    <!--<div data-bind="dxList:{
+                            dataSource: listDataSource,
+                            editEnabled: true,
+                            editConfig: {selectionEnabled: true, },
+                            selectedItems: selectedItems,
+                            height:'92%'
+                            }">
+    <div data-options="dxTemplate:{name:'item'}" 
+    data-bind="click: function() {  $root.itemClicked(ItemName)}, style: { backgroundColor: $root.getColor(ItemName) }">     
+     <div data-bind="text: ItemName"></div> 
+        --<div data-bind="dxButton: { text: 'Click Me', clickAction: function(e) {$root.buttonClick(e, $data);} }"></div> -->   <!--This is to implement the button click 
+     <div data-bind="text: Qty"></div>  
+     <div data-bind="text: DeliveryStock"></div>
+    </div>    
+    </div> -->   
+    <div data-bind="dxList:{
+                            dataSource: listDataSource,
+                            editEnabled: true,
+                            editConfig: {selectionEnabled: true, },
+                            selectedItems: selectedItems,
+                            height:'92%'
+                            }">
+    <div data-options="dxTemplate:{name:'item'}" 
+    data-bind="click: function() {  $root.itemClicked(ProductName)}, style: { backgroundColor: $root.getColor(ProductName) }">
+     <table>
+        <tr>
+            <td colspan="6"><div style="align:left;font-size:12px; color:black;white-space:pre-wrap;" data-bind="text: ProductName"></div>  </td>       
+        </tr>
+         <tr>
+            <td align="left" width="15%" style="color:black;font-weight:bold;">Qty:</td>
+            <td align="left" width="10%" ><input class="R3textBoxQty" type="text" /> </td>                   
+            <!--<td align="left" width="10%" style="font-size:10px; white-space:pre-wrap;color:black;" data-bind="dxTextBox: {value: Qty}"  ></td>                               -->
+            <td style="color:black;width:10%;font-size:10px;" data-bind="text: UOM"> </td>
+            <td align="right" width="10%" style="color:black;">@</td>
+            <td style="color:black;" data-bind="text: CataloguePrice"> </td>
+            <td style="color:black;" data-bind="text: StockQty"> </td>            
+        </tr>        
+    </table>
+    </div>    
+    </div> 
+   
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <div  data-bind="dxButton:{text:'Add To Cart', clickAction:AddToCart}" ></div>    
+    <!--<div  data-bind="dxButton:{text:'Save', clickAction:SaveOrder}" ></div>    -->
+  </div>
+</div>

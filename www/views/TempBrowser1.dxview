@@ -1,0 +1,5 @@
+<div data-options="dxView : { name: 'TempBrowser1', title: 'TempBrowser1' } " >
+    <div  data-options="dxContent : { targetPlaceholder: 'content' } " >
+        <div id="gridContainer" style="height:550px; overflow:scroll; margin: 0 auto"></div>  
+    </div>
+</div>

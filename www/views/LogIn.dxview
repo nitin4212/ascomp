@@ -1,0 +1,15 @@
+<div data-options="dxView : { name: 'LogIn', title: 'Log In' } " >
+    <div  data-options="dxContent : { targetPlaceholder: 'content' } " >
+    <div style="height:75px;" ></div>
+        <div>
+            <div style="font-weight:bold;font-size:15px" >User ID: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="text" placeholder="Enter your user id..." /> </div>
+        </div>
+        <div style="height:35px;" ></div>
+        <div data-bind="dxTextBox: {mode: 'password',value: Password,focusOutAction: SetPassword}" id ="TBPassword"></div>
+        <!--<div>
+            <div style="font-weight:bold;font-size:15px">Password:&nbsp;&nbsp;             <input type="text" placeholder="Enter your password.."  </div>
+        </div>-->
+
+        
+    </div>
+</div>

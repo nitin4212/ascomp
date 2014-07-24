@@ -1,0 +1,65 @@
+<div data-options="dxView : { name: 'Cart', title: 'Cart' } " >
+    <div  data-options="dxContent : { targetPlaceholder: 'content' } " >
+   <!-- <table>
+              <tr>                    
+                    <td  class="R3trsize" >   Item  </td>
+                    <td class="R3trsize" width="10%" height="15px" >Qty:</td>                
+                    <td class="R3trsize" width="10%" height="15px" >Price </td>
+                </tr>
+      </table>-->
+      <table >
+                <tr>
+                    <td  style="vertical-align: top;height:20px; font-weight:bold; font-size:10px;width:15%;color:black;white-space:pre-wrap;" >
+                        Item
+                    </td>
+                    <td style="vertical-align: top;height:20px; font-weight:bold;font-size:10px;width:5%;color:black;white-space:pre-wrap;" >
+                        Qty
+                    </td>
+                    <td style="vertical-align: top;height:20px; font-weight:bold;font-size:10px;width:5%;color:black;white-space:pre-wrap;" >
+                        Price
+                    </td>
+                </tr>
+                <tr><td colspan="3" ><hr /></td> </tr>
+            </table>
+        <div data-bind="dxList:{
+                            dataSource: DsCart,
+                            height:'75%'
+                            }">
+            <div data-options="dxTemplate:{name:'item'}">
+            <table>
+                <tr>
+                    <td style="width:50%;font-size:10px; white-space:pre-wrap;color:black;" data-bind="text: ProductName"></div>  </td>       
+                    <td width="5%" height="35px" style="font-size:10px; white-space:pre-wrap;color:black;" data-bind="dxTextBox: {value: Qty,valueChangeAction: QtyValueChanged}" style="font-size:10px; white-space:pre-wrap;color:black;"></td>                
+                    <!--<td width="5%" height="35px" style="font-size:10px; white-space:pre-wrap;color:black;" data-bind="dxNumberBox: { }" style="font-size:10px; white-space:pre-wrap;color:black;"></td>                -->
+                    <td width="10%" ></td>
+                    <td width="15%" height="35px" data-bind="text: NetPrice" style="font-size:10px; white-space:pre-wrap;color:black;"> </td>
+                </tr>
+            </table>
+            <!--<table>  
+                <tr>
+                    <td colspan="3" style="white-space:pre-wrap;color:black;" data-bind="text: ProductName"></div>  </td>       
+                </tr>            
+                <tr>                   
+                    <td style="width:25%" ></td>
+                    <td style="width:5%;color:black; " >Qty:</td>
+                    <td width="5%" height="35px" data-bind="dxTextBox: {value: Qty}" style=" white-space:pre-wrap;color:black;"></td>                
+                    <td width="15%" height="35px" data-bind="text: CataloguePrice" style=" white-space:pre-wrap;color:black;"> </td>
+                </tr>
+            </table>  -->
+            </div>  
+        </div>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <table> 
+            <tr>
+                <td style="font-weight:bold;font-size:15px;width:40%" >
+                    Estimated Total:
+                </td>
+                <td width="35%" style="font-size:15px;"><div id="lEstimatedTotal" data-bind="text:TotalPrice" ></div> </td>
+                 <td data-bind="dxButton:{text:'Place Order', clickAction:SaveOrder}">                    
+                </td>
+            </tr>
+        </table>        
+    </div>
+</div>
